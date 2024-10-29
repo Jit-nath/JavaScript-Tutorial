@@ -35,4 +35,4 @@ fnc();
 
 fnc; // bracket less function
 
-// <button onClick ="fnc()"></button> immidiately invoked expression
+// <button onClick ="fnc"></button> immidiately invoked expression
