@@ -1,0 +1,85 @@
+difference between let and var?
+var is the older way of declaring variables in javascript and let is a mordern way
+var allowes you to redeclare the same variables but let doesnt
+you can access var decalred variables outside its scope(eg : access variable outside function)
+but with let you cant.
+________________________________________________________________
+{
+    var a =10;
+    let b =10;
+}
+console.log(a);//no error
+console.log(b);//error
+________________________________________________________________
+var a =10;
+var a =20; // no error
+
+let b =10;
+let b =20; // error
+________________________________________________________________
+console.log(a);
+var a; // no error <--- its called hoisting, people generally don't do this type of mistake.
+console.log(b);
+let b; //error
+
+________________________________________________________________
+
+print pattern
+
+****
+ **
+ **
+****
+________________________________________________________________
+let n = 4;
+let k = n / 2;   // its not ineteger its float
+k = k - (k % 1); // its a way to make it integer
+let l = n / 4;   // but there are more efficient ways
+l = l - (l % 1); // let l = Math.floor(n/4);
+
+for (let i = 0; i < n; i++) {
+  process.stdout.write("*"); // inline printing for loops
+}
+console.log("");
+
+for (let i = 0; i < k; i++) {
+  for (let j = 0; j < l; j++) {
+    process.stdout.write(" ");
+  }
+  for (let j = 0; j < k; j++) {
+    process.stdout.write("*");
+  }
+  console.log("");
+}
+
+for (let i = 0; i < n; i++) {
+  process.stdout.write("*");
+}
+________________________________________________________________
+
+translate code ->
+#include <stdio.h>
+
+int main() {
+    int a = 1, b = 2;
+    a > b ? a ^ b ? a ^ b : a ^ b : a ^ b ? a ^ b : a ^ b;
+    printf("%d\n", a);
+    printf("%d\n", b);
+    return 0;
+}
+________________________________________________________________
+
+let a = 1, b =2;
+if(a>b){
+    if(a^b)
+        a^b;
+    else
+        a^b;
+}
+else{
+     if(a^b)
+        a^b;
+    else
+        a^b;
+}
+console.log(a,b);
